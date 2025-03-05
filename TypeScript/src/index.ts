@@ -32,6 +32,13 @@ enum Direction
 
 const direction = Direction.Left
 
+//Type Assertions
+const productName: any = "Boné"
+
+//let itemId = productName as string
+
+//outra forma
+let itemId = <string>productName
 
 console.log(direction);
 
