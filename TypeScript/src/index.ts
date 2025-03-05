@@ -27,10 +27,10 @@ const productId: string | number | boolean = false
 enum Direction
 {
     Up = 1,
-    Down = 2
+    Down = 2,Left = "Esquerda"
 }
 
-const direction = Direction.Up
+const direction = Direction.Left
 
 
 console.log(direction);
