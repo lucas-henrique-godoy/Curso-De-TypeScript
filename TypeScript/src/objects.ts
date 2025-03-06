@@ -9,7 +9,8 @@ type User = {
     age: number;
     email: string;
     password?: string;
-    orders: Order[];
+    orders: Order[],
+    register(): string;
 };
 
 const user: User = {
@@ -17,7 +18,10 @@ const user: User = {
     age: 27,
     email: "lucas@email.com",
     password: "12345",
-    orders: [{productId: "1", price: 200}]
+    orders: [{productId: "1", price: 200}],
+    register(){
+        return 'a';
+    }    
 };
 
 
@@ -38,17 +42,24 @@ const author: Author & User = {
     email: "author@gmail.com",
     firstName: "Godoy",
     orders: [],
+    register() {
+       return 'a'; 
+    },
 };
 
-//Interface
+//Interfaces
 interface UserInterface {
     readonly firstName: string; //readonly é apenas leitura, e não pode modificar o valor
     email: string;
+    login(): string;
 }
 
 const emailUser: UserInterface = {
     email: "lucas@email.com",
-    firstName: "Lucas"
+    firstName: "Lucas",
+    login(){
+        return 'a';
+    }
 };
 
 interface AuthorInteerface {
@@ -58,7 +69,10 @@ interface AuthorInteerface {
 const newAuthor: UserInterface & AuthorInteerface = {
     email: "author@gmail.com",
     firstName: "Lucas",
-    livros: []
+    livros: [],
+    login(){
+        return 'a';
+    }
 };
 
 type Grade = number | string
