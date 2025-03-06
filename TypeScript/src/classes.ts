@@ -1,8 +1,6 @@
 interface IPerson
 {
-    id: number;
-    name: string;
-    age: number;
+    id: number;    
     sayMyName(): string;
 }
 
@@ -10,7 +8,7 @@ class Person implements IPerson
 {
     readonly id: number;
     protected name: string;
-    age: number;
+    private age: number;
 
     constructor(id: number, name: string, age: number)
     {
@@ -25,4 +23,18 @@ class Person implements IPerson
     }
 }
 
-const lucas = new Person(1, "Lucas", 27);
+class Employee extends Person
+{
+   constructor(id: number, name: string, age: number)
+   {
+      super(id, name, age);
+   }
+
+   whoAmI()
+   {
+      return this.age;
+   }
+}
+
+const pessoa1 = new Person(1, "Lucas", 27);
+
