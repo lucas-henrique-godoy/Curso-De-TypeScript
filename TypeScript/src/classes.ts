@@ -1,6 +1,14 @@
-class Person 
+interface IPerson
 {
     id: number;
+    name: string;
+    age: number;
+    sayMyName(): string;
+}
+
+class Person implements IPerson
+{
+    readonly id: number;
     name: string;
     age: number;
 
@@ -10,4 +18,11 @@ class Person
         this.name = name;
         this.age = age;
     }
+
+    sayMyName(): string
+    {
+        return this.name;
+    }
 }
+
+const lucas = new Person(1, "Lucas", 27);
