@@ -9,7 +9,7 @@ interface IPerson
 class Person implements IPerson
 {
     readonly id: number;
-    name: string;
+    protected name: string;
     age: number;
 
     constructor(id: number, name: string, age: number)
