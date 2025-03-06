@@ -22,6 +22,12 @@ const user: User = {
 
 
 
-const printLog = (message?: string) =>{}
+const printLog = (message: string) =>{}
 
-printLog(user.password)
+printLog(user.password!)
+
+
+//Unions
+type Author = {
+    
+}
