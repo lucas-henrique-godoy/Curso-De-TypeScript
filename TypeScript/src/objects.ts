@@ -4,7 +4,7 @@ type Order = {
     price: number;
 };
 
-type User= {
+type User = {
     firstame: string;
     age: number;
     email: string;
@@ -23,6 +23,5 @@ const user: User = {
 
 
 const printLog = (message?: string) =>{}
-
 
 printLog(user.password)
