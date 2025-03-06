@@ -5,7 +5,7 @@ type Order = {
 };
 
 type User = {
-    firstame: string;
+    firstName: string;
     age: number;
     email: string;
     password?: string;
@@ -13,7 +13,7 @@ type User = {
 };
 
 const user: User = {
-    firstame: "Lucas",
+    firstName: "Lucas",
     age: 27,
     email: "lucas@email.com",
     password: "12345",
@@ -22,12 +22,44 @@ const user: User = {
 
 
 
-const printLog = (message: string) =>{}
+const printLog = (message: string) =>{};
 
-printLog(user.password!)
+printLog(user.password!);
 
 
-//Unions
+// Unions
 type Author = {
-    
+    livros: string[];
+};
+
+const author: Author & User = {
+    age: 2,
+    livros: ["1"],
+    email: "author@gmail.com",
+    firstName: "Godoy",
+    orders: [],
+};
+
+//Interface
+interface UserInterface {
+    readonly firstName: string; //readonly é apenas leitura, e não pode modificar o valor
+    email: string;
 }
+
+const emailUser: UserInterface = {
+    email: "lucas@email.com",
+    firstName: "Lucas"
+};
+
+interface AuthorInteerface {
+    livros: string[]
+};
+
+const newAuthor: UserInterface & AuthorInteerface = {
+    email: "author@gmail.com",
+    firstName: "Lucas",
+    livros: []
+};
+
+type Grade = number | string
+const grade: Grade = 1;
