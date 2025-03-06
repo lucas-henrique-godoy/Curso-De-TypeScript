@@ -23,6 +23,17 @@ class Person implements IPerson
     }
 }
 
+//Mesma coisa que acima
+class PersonRefact
+{
+    constructor(
+        readonly id: number,
+        protected name: string,
+        private age: number
+    ){}    
+}
+
+
 class Employee extends Person
 {
    constructor(id: number, name: string, age: number)
