@@ -32,7 +32,7 @@ class Employee extends Person
 
    whoAmI()
    {
-      return this.age;
+      return this.name;
    }
 }
 
